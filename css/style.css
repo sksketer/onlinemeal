@@ -93,7 +93,7 @@
   animation-duration: 1.5s;
 }
 .mySlides img{
-    opacity: .6;
+    opacity: .7;
 }
 .text{
     font-size: large;
@@ -140,4 +140,11 @@ margin: 10px;
     height: 300px;
     opacity: none;
     width: 300px;
+}
+.h-primary-center{
+    text-align: left;
+    margin-left: 42px;
+
+    font-size: 45px;
+    font-weight: bold;
 }
