@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/logo.png" type="image/gif" sizes="16x16">
+    <title>Online Meal</title>
+</head>
+<body>
+    <nav class="nav">
+        <div class="logo">
+            <img src="img/logo.png" alt="">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Login</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 4</div>
+          <img class="img" src="img/img1.jpg" style="width:100%">
+          <div class="text">Breakfast</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 4</div>
+          <img class="img" src="img/img2.jpg" style="width:100%">
+          <div class="text">Lunch</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 4</div>
+          <img class="img" src="img/kabir-cheema-oUIPGCBx2OI-unsplash.jpg" style="width:100%">
+          <div class="text">Snacks</div>
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <img class="img" src="img/dinner.jpg" style="width:100%">
+            <div class="text">Dinner</div>
+        </div>
+
+        <div class="slideshow-container-text">
+            <h1>Welcome, to online meal</h1>
+            <p>Delicious Meal is here.</p>
+        </div>  
+
+    </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span>
+          <span class="dot"></span> 
+        </div>
+
+        <section class="services-container">
+            <h1 class="h-primary-center">
+                Our Services
+            </h1>
+            <div class="services">
+                <div class="box">
+                    <img src="img/breakfast.jpg" alt="Image Not Found">
+                    <h2 class="h-secondary center">Breakfast</h2>
+                    <p></p>
+                </div>
+                <div class="box">
+                    <img src="img/lunch.jpg" alt="Image Not Found">
+                    <h2 class="h-secondary center">Lunch</h2>
+                    <p></p>
+                </div>
+                <div class="box">
+                    <img src="img/snack.jpg" alt="Image Not Found">
+                    <h2 class="h-secondary center">Snacks</h2>
+                    <p></p>
+                </div>
+                <div class="box">
+                    <img src="img/dinnder.jpg" alt="Image Not Found">
+                    <h2 class="h-secondary center">Dinner</h2>
+                    <p></p>
+                </div>
+            </div>
+        </section>
+        
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+
+
+</body>
+</html>
