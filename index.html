@@ -3,137 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/formcss.css">
-    <link rel="icon" href="img/logo.png" type="image/gif" sizes="16x16"> 
-    <title>Online Meal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/update2.css">
+    <title>Online meal</title>
 </head>
 <body>
-    <nav class="nav">
-        <div class="logo">
-            <img src="img/logo.png" alt="">
-        </div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <div class="login">
-                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="Login-form">Login</button>
-
-                <div id="id01" class="modal">
-                
-                  <form class="modal-content animate" action="" method="post">
-                    <div class="imgcontainer">
-                      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                    </div>
-                
-                    <div class="container">
-                      <label for="uname"><b>Username</b></label>
-                      <input type="text" placeholder="Enter Username" name="uname" required>
-                    
-                      <label for="psw"><b>Password</b></label>
-                      <input type="password" placeholder="Enter Password" name="psw" required>
-
-                      <button type="submit">Login</button>
-                      <label>
-                        <input type="checkbox" checked="checked" name="remember"> Remember me
-                      </label>
-                    </div>
-                
-                    <div class="container" style="background-color:#f1f1f1">
-                      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                      <span class="psw"><a href="#" style="color: #000;">Forgot password?</a></span>
-                    </div>
-                  </form>
-                </div>
-            </div>
-        </ul>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-    </nav>
-
-    <div class="slideshow-container">
-
-        <div class="mySlides fade">
-          <div class="numbertext">1 / 4</div>
-          <img class="img" src="img/img1.jpg" style="width:100%">
-          <div class="text">Breakfast</div>
-        </div>
-        
-        <div class="mySlides fade">
-          <div class="numbertext">2 / 4</div>
-          <img class="img" src="img/img2.jpg" style="width:100%">
-          <div class="text">Lunch</div>
-        </div>
-        
-        <div class="mySlides fade">
-          <div class="numbertext">3 / 4</div>
-          <img class="img" src="img/kabir-cheema-oUIPGCBx2OI-unsplash.jpg" style="width:100%">
-          <div class="text">Snacks</div>
-        </div>
-        
-        <div class="mySlides fade">
-            <div class="numbertext">4 / 4</div>
-            <img class="img" src="img/dinner.jpg" style="width:100%">
-            <div class="text">Dinner</div>
-        </div>
-
-        <div class="slideshow-container-text">
-            <h1>Welcome, to online meal</h1>
-            <p>Delicious Meal is here.</p>
-        </div>  
-
+    <!-- NAVIGATION BAR STARTED -->
+    <div class="nav" id="home">
+        <div class="nav-logo"><img src="img/logowithtext.png" alt="logo" width="180px" ><label class="nav-logo-text"></label></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="cta"><button>Login</button></a>
     </div>
-        <br>
-        
-        <div style="text-align:center">
-          <span class="dot"></span> 
-          <span class="dot"></span> 
-          <span class="dot"></span>
-          <span class="dot"></span> 
-        </div>
+    <!-- NAVIGATION BAR COMPLETED -->
 
-        <section class="services-container" id="services">
-            <h1 class="h-primary-center">
-                Our Services
-            </h1>
-            <div class="services">
-                <div class="box">
-                    <img src="img/breakfast.jpg" alt="Image Not Found">
-                    <h2 class="h-secondary center">Breakfast</h2>
-                    <p></p>
-                </div>
-                <div class="box">
-                    <img src="img/lunch.jpg" alt="Image Not Found">
-                    <h2 class="h-secondary center">Lunch</h2>
-                    <p></p>
-                </div>
-                <div class="box">
-                    <img src="img/snack.jpg" alt="Image Not Found">
-                    <h2 class="h-secondary center">Snacks</h2>
-                    <p></p>
-                </div>
-                <div class="box">
-                    <img src="img/dinnder.jpg" alt="Image Not Found">
-                    <h2 class="h-secondary center">Dinner</h2>
-                    <p></p>
-                </div>
+    <!-- SLIDESHOW START -->
+    <div class="main">
+        <div class="slide-show">
+            <div class="myslide">
+                <div class="numbertext">1 / 4</div>
+                <img class="img" src="img/breakfast.jpg" style="width:100%">
+                <div class="text">Breakfast</div>
             </div>
-        </section>
-        
+            <div class="myslide">
+                <div class="numbertext">2 / 4</div>
+                <img class="img" src="img/lunch.jpg" style="width:100%">
+                <div class="text">Lunch</div>
+            </div>
+            <div class="myslide">
+                <div class="numbertext">3 / 4</div>
+                <img class="img" src="img/snack.jpg" style="width:100%">
+                <div class="text">Snacks</div>
+            </div>
+            <div class="myslide">
+                <div class="numbertext">4 / 4</div>
+                <img class="img" src="img/dinner.jpg" style="width:100%">
+                <div class="text">Dinner</div>
+            </div>
+            <!-- <div class="slide-show-absolute-text">
+                <h1>Welcome, to online meal</h1>
+                <p>Delicious Meal is here.</p>
+            </div> -->
+        </div>
+    </div>
+    <br>
+    <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span>
+        <span class="dot"></span> 
+    </div>
+    <!-- SLIDESHOW END -->
 
+    <!-- SERVICES START -->
+    <div class="services" id="services">
+        <div class="heading">
+            <h1>OUR SERVICES</h1>
+        </div>
+        <div class="services-card">
+            
+                <div class="card">
+                    <img src="img/card-breakfast-2.jpg" alt="Image Not Found">
+                    <h2 class="card-text">Breakfast</h2>
+                </div>
+                <div class="card">
+                    <img src="img/card-lunch-2.jpg" alt="Image Not Found">
+                    <h2 class="card-text">Lunch</h2>
+                </div>
+            
+                <div class="card">
+                    <img src="img/card-snacks-2.jpg" alt="Image Not Found">
+                    <h2 class="card-text">Snacks</h2>
+                </div>
+                <div class="card">
+                    <img src="img/card-dinner-2.jpg" alt="Image Not Found">
+                    <h2 class="card-text">Dinner</h2>
+                </div>
+
+                <!-- <div class="container-fluid">
+                    <div class="row">
+                      <div class="card">
+                        <div class="col-lg-3 mx-2">
+                            <img src="img/card-breakfast.jpg" alt="Image Not Found" width="250px" >
+                            <h2 class="card-text">Breakfast</h2>
+                          </div>
+                      </div>
+                      <div class="card">
+                          <div class="col-lg-3 mx-2">
+                        <img src="img/card-lunch.jpg" alt="Image Not Found" width="250px">
+                        <h2 class="card-text">Lunch</h2>
+                      </div>
+                      </div>
+                      <div class="card">
+                          <div class="col-lg-3 mx-2">
+                        <img src="img/card-snacks.jpg" alt="Image Not Found" width="250px">
+                        <h2 class="card-text">Snacks</h2>
+                      </div>
+                      </div>
+                      <div class="card">
+                          <div class="col-lg-3 mx-2">
+                        <img src="img/card-dinner.jpg" alt="Image Not Found" width="250px">
+                        <h2 class="card-text">Dinner</h2>
+                      </div>
+                      </div>
+                      
+                    </div>
+                  </div>  -->
+            
+        </div>
+    </div>
+    <!-- SERVICES END -->
+    <!-- SCRIPT ARE HERE -->
     <script>
         var slideIndex = 0;
         showSlides();
 
         function showSlides() {
             var i;
-            var slides = document.getElementsByClassName("mySlides");
+            var slides = document.getElementsByClassName("myslide");
             var dots = document.getElementsByClassName("dot");
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";  
@@ -149,19 +142,8 @@
         }
     </script>
 
-<!-- Login form script -->
-    <script>
-    // Get the modal
-    var modal = document.getElementById('id01');
-    
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-    </script>
-    <!-- Login Form scrip ...END... -->
-
+    <div class="home-selector">
+        <a href="#home"><i class="fa fa-arrow-circle-o-up" style="font-size:36px"></i></a>
+    </div>
 </body>
 </html>
