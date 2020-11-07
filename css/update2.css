@@ -123,7 +123,7 @@ li, a, button, .slide-show-absolute-text{
 }
 .card img{
     width: 100%;
-    border-radius: 20px;
+    border-radius: 20px 20px 0px 0px;
 }
 .card h2{
     color: #edf0f1;
@@ -135,7 +135,7 @@ li, a, button, .slide-show-absolute-text{
 .about{
     color: white;
     font-family: 'Montserrat', sans-serif;
-    background-color:  rgb(35, 36, 41);
+    background-color:  rgb(53,53,53);
 }
 .about .heading{
     font-size: xx-large;
@@ -177,21 +177,23 @@ li, a, button, .slide-show-absolute-text{
     float: right;
     padding: 0px 20px 0px 0px;
 }
-
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px){
     body {
-      background-color: rgb(0, 0, 0);
-    }
-    .nav{
-        display: flex;
-        flex-direction: column;
-    }
-    .nav-logo{
-        margin: 0px 0px 10px 0px;
-    }
-    .cta button{
-        margin-top: 20px;
-    }
+        background-color: rgb(0, 0, 0);
+      }
+      .nav{
+          display: flex;
+          flex-direction: column;
+      }
+      .nav-logo{
+          margin: 0px 0px 10px 0px;
+      }
+      .cta button{
+          margin-top: 20px;
+      }
+}
+@media only screen and (max-width: 700px) {
+    
     .services-card{
         width: 55%;
         margin: auto;
@@ -211,8 +213,20 @@ li, a, button, .slide-show-absolute-text{
     }
   }
 
-  @media only screen and (max-width: 550px){
+@media only screen and (max-width: 550px){
     .about .about-content .chef img{
         display: none;
     }
-  }
+}
+@media only screen and (max-width: 475px){
+    .myslide{
+        width: 100%;
+        margin: auto;
+    }
+    .nav-links li{
+        padding: 0px 5px;
+      }
+    .nav-links li a{
+        padding: 0px 1px;
+    }
+}
