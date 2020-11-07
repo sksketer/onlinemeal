@@ -60,7 +60,7 @@ li, a, button, .slide-show-absolute-text{
 /* SLIDESSHOW START */
 .slide-show {
     position: relative;
-    background-color: rgb(53, 53, 53);
+    background-color: rgb(35, 36, 41);
 }
 .myslide{
     width: 80%;
@@ -103,10 +103,11 @@ li, a, button, .slide-show-absolute-text{
     font-family: 'Montserrat', sans-serif;
     background-color:  rgb(35, 36, 41);
 }
-.services .heading{
+.services .heading label{
     font-size: xx-large;
     font-weight: bolder;
-    margin-left: 20px;
+    margin-left: 10%;
+    border-bottom: 3px solid white;
 }
 .services-card{
     width: 100%;
@@ -121,9 +122,18 @@ li, a, button, .slide-show-absolute-text{
     margin: 5px;
     border-radius: 20px;
 }
+.services .services-card .card:hover{
+    background-color: rgb(24, 25, 29);
+    opacity: 0.5;
+}
 .card img{
     width: 100%;
+    cursor: pointer;
     border-radius: 20px 20px 0px 0px;
+    background-color: rgb(255, 255, 255);
+}
+.services .services-card .card img:hover{
+    opacity: 0.5;
 }
 .card h2{
     color: #edf0f1;
@@ -135,12 +145,15 @@ li, a, button, .slide-show-absolute-text{
 .about{
     color: white;
     font-family: 'Montserrat', sans-serif;
-    background-color:  rgb(53,53,53);
+    background-color:  rgb(39, 39, 39);
 }
 .about .heading{
     font-size: xx-large;
     font-weight: bolder;
-    margin-left: 20px;
+    margin-left: 10%;
+}
+.about .heading label{
+    border-bottom: 3px solid white;
 }
 .about .about-content .upper-text{
     width: 80%;
@@ -163,6 +176,39 @@ li, a, button, .slide-show-absolute-text{
     margin: 10px auto;
 }
 /* ABOUT END */
+
+/* CONTACT US START */
+.contact{
+    width: 80%;
+    margin: auto;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    background-color:  rgb(35, 36, 41);
+}
+.contact .heading label{
+    font-size: xx-large;
+    font-weight: bolder;
+    margin-left: 20px;
+    border-bottom: 3px solid white;
+}
+.contact{
+
+}
+.contact .form form{
+    display: flex;
+    flex-direction: column;
+}
+.contact .form form .form-input-text, .contact .form form .form-textarea{
+    width: 60%;
+    margin: 10px auto;
+}
+.contact .form form .form-submit{
+    width: 20%;
+    margin: 10px auto;
+}
+/* CONTACT US END */
+
+/* FOOTER START */
 .home-selector{
     background-color: rgb(24, 25, 29);
     width: 100%;
@@ -177,6 +223,7 @@ li, a, button, .slide-show-absolute-text{
     float: right;
     padding: 0px 20px 0px 0px;
 }
+/* FOOTER END */
 @media only screen and (max-width: 800px){
     body {
         background-color: rgb(0, 0, 0);
@@ -204,11 +251,14 @@ li, a, button, .slide-show-absolute-text{
     .services .heading{
         margin: 0;
         text-align: center;
+        padding: 10px 0px;
     }
     .about .heading{
         text-align: center;
+        padding: 10px 0px;
     }
-    .about .heading h1{
+    .contact .heading{
+        text-align: center;
         padding: 10px 0px;
     }
   }
@@ -228,5 +278,8 @@ li, a, button, .slide-show-absolute-text{
       }
     .nav-links li a{
         padding: 0px 1px;
+    }
+    .contact .heading label{
+        font-size: medium;
     }
 }
