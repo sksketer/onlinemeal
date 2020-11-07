@@ -7,7 +7,7 @@
     scroll-behavior: smooth;
 }
 body{
-    background-color: rgb(35, 36, 41);
+    background-color: rgb(35,36,41);
 }
 li, a, button, .slide-show-absolute-text{
     font-family: 'Montserrat', sans-serif;
@@ -114,6 +114,7 @@ li, a, button, .slide-show-absolute-text{
     flex-direction: row;
     justify-content: center;
     margin: auto;
+    margin-bottom: 25px;
 }
 .card{
     background-color: rgb(82, 82, 82);
@@ -130,10 +131,51 @@ li, a, button, .slide-show-absolute-text{
 }
 /* SERVICES END */
 
-
+/* ABOUT START */
+.about{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    background-color:  rgb(35, 36, 41);
+}
+.about .heading{
+    font-size: xx-large;
+    font-weight: bolder;
+    margin-left: 20px;
+}
+.about .about-content .upper-text{
+    width: 80%;
+    margin: 0px auto;
+    position: relative;
+}
+.about .about-content .chef img{
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.about .about-content .mid-image{
+    width: 80%;
+    margin: 50px auto;
+}
+.about .about-content .mid-image img{
+    border-radius: 50px;
+    width: 100%;
+    margin: 10px auto;
+}
+/* ABOUT END */
 .home-selector{
+    background-color: rgb(24, 25, 29);
+    width: 100%;
+    height: 100px;
+}
+.home-selector p{
+    color: white;
+    padding-top: 20px;
+    text-align: center;
+}
+.home-selector a{
     float: right;
-    margin: 20px 20px 20px 0px;
+    padding: 0px 20px 0px 0px;
 }
 
 @media only screen and (max-width: 700px) {
@@ -155,9 +197,22 @@ li, a, button, .slide-show-absolute-text{
         margin: auto;
         display: flex;
         flex-direction: column;
+        padding-bottom: 25px;
     }
     .services .heading{
         margin: 0;
         text-align: center;
+    }
+    .about .heading{
+        text-align: center;
+    }
+    .about .heading h1{
+        padding: 10px 0px;
+    }
+  }
+
+  @media only screen and (max-width: 550px){
+    .about .about-content .chef img{
+        display: none;
     }
   }
