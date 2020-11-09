@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/breakfast-style.css">
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
+    <title>Online meal BreakFast</title>
+</head>
+<body>
+    <!-- NAVIGATION BAR STARTED -->
+    <div class="nav" id="home">
+        <div class="nav-logo"><img src="/img/logowithtext.png" alt="logo" width="180px" ><label class="nav-logo-text"></label></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="cta"><button>Login</button></a>
+    </div>
+    <!-- NAVIGATION BAR COMPLETED -->
+
+    <!-- MAIN-CONTENT START -->
+    <div class="main-content">
+        <div class="breakfast-heading">
+            <label for="">Breakfast</label>
+        </div>
+        
+        <div class="myslider">
+            <!-- <div class="btn-left">
+                <button  onclick="plusDivs(-1)"><i class="fas fa-caret-square-right"></i></button>
+                <label for=""><i class="fa fa-arrow-left" aria-hidden="true"></i>
+                </label>
+            </div> -->
+
+            <div class="myslide">
+                <div class="img1">
+                    <img src="/img/Breakfast/amlet.jpg" width="400px" height="250px" alt="Image Not Found">
+                    <label for="">Amlet</label>
+                </div>
+                <div class="img2">
+                    <img src="/img/Breakfast/Aloo_Paratha.jpg" width="400px" height="250px" alt="Image Not Found">
+                    <label for="">Aloo Pharatha</label>
+                </div>
+                <div class="img3">
+                    <img src="/img/Breakfast/bread-and-butter.jpg" width="400px" height="250px" alt="Image Not Found">
+                    <label for="">Bread and Butter</label>
+                </div>              
+            </div> 
+            <div class="myslide">
+                <div class="img1">
+                    <img src="/img/Breakfast/chai pharatha.jpg" width="400px" height="250px" alt="Image Not Found">
+                    <label for="">Chai Pharatha</label>
+                </div>
+                <div class="img2">
+                    <img src="/img/Breakfast/poha.JPG" width="400px" height="250px" alt="Image Not Found">
+                    <label for="">Poha</label>
+                </div>
+                <div class="img3">
+                    <img src="/img/Breakfast/Chhole-Bhature.jpg" width="400px" height="250px" alt="Image Not Found">
+                    <label for="">Chhole Bhature</label>
+                </div>              
+            </div>
+
+            <!-- <div class="btn-right">
+                <button onclick="plusDivs(1)"><i class="fas fa-caret-square-left"></i></button>
+                <label for=""><i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </div> -->
+        </div>
+    </div>
+
+    
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("myslide");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "flex";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+
+    <!-- MAIN-CONTENR END -->
+
+    <!-- FOOTER START -->
+    <div class="home-selector">
+        <p>&copy; copyright 2020 by sketeramrit</p>
+        <label for="" class="contactus"><a href="#home"><i class="fa fa-comments-o" style="font-size:36px"><span>Contact us</span></i></a></label>
+        <a href="#home" class="scroll-up"><i class="fa fa-arrow-circle-o-up" style="font-size:36px"></i></a>
+    </div>
+    <!-- FOOTER END -->
+</body>
+</html>
