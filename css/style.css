@@ -207,9 +207,16 @@ li, a, button, .slide-show-absolute-text{
     width: 60%;
     margin: 10px auto;
     background-color: gray;
+    color: rgb(255, 255, 255);
     border: none;
     padding: 2px 2px 2px 15px;
+    transition: all 0.3s ease 0s;
 }
+.feedback .form form .form-input-text:hover, .feedback .form form .form-textarea:hover{
+    background-color: white;
+    color: black;
+}
+
 .feedback .form form .form-textarea{
     border-radius: 20px 20px 0px 20px;
 }
