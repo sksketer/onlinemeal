@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: rgb(42, 43, 46);
+}
+li, a, button, .slide-show-absolute-text{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 5%;
+    background-color: rgb(35, 36, 41);
+}
+.nav-logo {
+    cursor: pointer;
+    margin-right: auto;
+}
+.nav-links{
+    list-style: none;
+}
+.nav-links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav-links li a{
+    transition: all 0.3s ease 0s;
+}
+.nav-links li a:hover{
+    color: red;
+    border-bottom: 2px solid red;
+    /* color: #0088a9; */
+}
+.cta button{
+    padding: 9px 25px;
+    background-color: rgb(255, 0, 0);
+    /* background-color: rgba(0,136, 169, 1); */
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.cta button:hover{
+    background-color: rgba(255, 0, 0, 0.863);
+    /* background-color: rgba(0,136, 169, 0.8); */
+}
+/* NAVIGATION BAR END */
+
+/* MAIN-CONTENT START */
+
+/* MAIN-CONTENT END */
+.main-content{
+    width: 100%;
+}
+.main-content .breakfast-heading label{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+}
+.mySlides {display:none;}
+/* FOOTER START */
+.home-selector{
+    background-color: rgb(35, 36, 41);
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0px;
+}
+.home-selector p{
+    color: white;
+    padding-top: 20px;
+    text-align: center;
+}
+.home-selector label {
+    float: left;
+    margin: 0px 0px 2px 20px;
+    transition: all 0.3s ease 0s;
+}
+.home-selector label a i span{
+    font-size: medium;
+    padding: 2px;
+    display: none;
+}
+.home-selector a{
+    float: right;
+    padding: 0px 20px 2px 0px;
+    
+}
+/* FOOTER END */
