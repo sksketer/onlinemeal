@@ -9,7 +9,7 @@
 body{
     background-color: rgb(42, 43, 46);
 }
-li, a, button, .slide-show-absolute-text{
+li, a, .cta button, .slide-show-absolute-text{
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -21,7 +21,7 @@ li, a, button, .slide-show-absolute-text{
     justify-content: flex-end;
     align-items: center;
     padding: 30px 5%;
-    background-color: rgb(35, 36, 41);
+    background-color: rgb(24, 25, 29);
 }
 .nav-logo {
     cursor: pointer;
@@ -52,10 +52,69 @@ li, a, button, .slide-show-absolute-text{
     transition: all 0.3s ease 0s;
 }
 .cta button:hover{
-    background-color: rgba(255, 0, 0, 0.863);
+    background-color: rgba(255, 0, 0, 0.664);
     /* background-color: rgba(0,136, 169, 0.8); */
 }
 /* NAVIGATION BAR END */
+
+/* FORM CSS START */
+.signin-signup{
+    display: none;
+    margin: 48px 0px;
+}
+.signin-signup .main .form-heading{
+    text-align: center;
+    margin-bottom: 25px;
+}
+.signin-signup .main .form-heading span{
+    font-size: 81.96px;
+    font-weight: bolder;
+    color: red;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    -webkit-text-stroke: 1px rgb(99, 0, 0);
+}
+.signin-signup .main form{
+    margin: 0px auto;
+    width: 50%;
+    background-color: rgb(70, 68, 68);    
+}
+.signin-signup .main form input{
+    display: block;
+    margin: 0px auto;
+    border-radius: 20px;
+    border: none;
+    border-bottom: 2px solid black;
+    background: transparent;
+    box-shadow: 1px 1px 3px black;
+    padding: 5px 25px;
+}
+.signin-signup .main form .input:hover{
+    background-color: gray;
+}
+.signin-signup .main form .btn-login{
+    background-color: red;
+    font-weight: bold;
+}
+.signin-signup .main form .btn-login:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px 5px black;
+    color: white;
+    background-color: rgb(175, 0, 0);
+}
+.signin-signup .main form .btn-signup{
+    box-shadow: none;
+    padding-top: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+.signin-signup .main form .btn-signup:hover{
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    box-shadow: 1px 1px 3px black;
+}
+/* FORM CSS END */
 
 /* MAIN-CONTENT START */
 
@@ -73,14 +132,65 @@ li, a, button, .slide-show-absolute-text{
     display: flex;
     justify-content: center;
 }
-.mySlides {display:none;}
+.myslider {
+    width: 100%;
+    padding: 42px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.myslider .btn-left{
+    float: left;
+}
+.myslider .btn-left label{
+    background-color: white;
+    border-radius: 50%;
+}
+.myslider .btn-right{
+    float: right;
+}
+.myslider  .btn-right label{
+    background-color: white;
+    border-radius: 50%;
+}
+.myslider .myslide{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+}
+.myslider .myslide div{
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: gray;
+    margin: 0px 19px;
+    transition: all 0.3s ease 0s;
+}
+.myslider .myslide div:hover{
+    opacity: 0.5;
+}
+.myslider .myslide .img a img{
+    width: 100%;
+    cursor: pointer;
+    border-radius: 20px 20px 0px 0px;
+    background-color: white;
+}
+.myslider .myslide div label{
+    color: white;
+    text-align: center;
+    font-size: large;
+    margin: 10px auto;
+    text-shadow: 2px 2px 3px black;
+}
+
+
 /* FOOTER START */
 .home-selector{
-    background-color: rgb(35, 36, 41);
+    background-color: rgb(24, 25, 29);
     width: 100%;
     height: 100px;
-    position: absolute;
-    bottom: 0px;
 }
 .home-selector p{
     color: white;
@@ -103,3 +213,95 @@ li, a, button, .slide-show-absolute-text{
     
 }
 /* FOOTER END */
+
+/* FEEDBACK START */
+.feedback{
+    display: none;
+    width: 80%;
+    margin: 15px auto;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    background-color:  rgb(35, 36, 41);
+}
+.feedback .heading label{
+    font-size: xx-large;
+    font-weight: bolder;
+    margin: 2px 0px 5px 20px;
+    border-bottom: 3px solid white;
+}
+.feedback .form form{
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+}
+.feedback .form form label{
+    width: 60%;
+    margin: 0px auto;
+}
+.feedback .form form .form-input-text{
+    border-radius: 20px;
+}
+.feedback .form form .form-input-text, .feedback .form form .form-textarea{
+    width: 60%;
+    margin: 10px auto;
+    background-color: gray;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 2px 2px 2px 15px;
+    transition: all 0.3s ease 0s;
+}
+.feedback .form form .form-input-text:hover, .feedback .form form .form-textarea:hover{
+    background-color: white;
+    color: black;
+}
+
+.feedback .form form .form-textarea{
+    border-radius: 20px 20px 0px 20px;
+}
+.feedback .form form .form-submit{
+    width: 20%;
+    margin: 10px auto;
+    color: white;
+    background: transparent;
+    border: none;
+    box-shadow: 3px 3px 8px white;
+    transition: all 0.3s ease 0s;
+}
+.feedback .form form .form-submit:hover{
+    color: red;
+    box-shadow: 1px 1px 8px white;
+}
+/* FEEDBACK END */
+
+@media only screen and (max-width: 800px){
+    .myslider .myslide img{
+        height: 150px;
+    }
+}
+@media only screen and (max-width: 650px){
+    .nav{
+        flex-direction: column;
+    }
+    .nav-logo{
+        margin: auto;
+    }
+    .nav-links{
+        margin: 15px auto;
+    }
+    .myslider .myslide{
+        width: 50%;
+        flex-direction: column;
+    }
+    .myslider .myslide .img{
+        
+        margin: 8px 0px;
+    }
+}
+@media only screen and (max-width: 475px){
+    .signin-signup .main .form-heading span{
+        font-size: 45px;
+    }
+    .signin-signup .main form{
+        width: auto;
+    }
+}

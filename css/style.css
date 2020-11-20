@@ -5,6 +5,12 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    transition: all 0.3s ease 0s;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
 }
 body{
     background-color: rgb(35,36,41);
@@ -21,7 +27,7 @@ li, a, button, .slide-show-absolute-text{
     justify-content: flex-end;
     align-items: center;
     padding: 30px 5%;
-    background-color: rgb(35, 36, 41);
+    background-color: rgb(24, 25, 29);
 }
 .nav-logo {
     cursor: pointer;
@@ -42,20 +48,82 @@ li, a, button, .slide-show-absolute-text{
     border-bottom: 2px solid red;
     /* color: #0088a9; */
 }
-.cta button{
+.sign-btn{
+    display: flex;
+    flex-direction: row;
+}
+.form-cta, .cta button{
     padding: 9px 25px;
     background-color: rgb(255, 0, 0);
-    /* background-color: rgba(0,136, 169, 1); */
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    transition: all 0.3s ease 0s;
+    margin: 0px 2px 0px 2px;
 }
-.cta button:hover{
+.form-cta:hover, .cta button:hover{
     background-color: rgba(255, 0, 0, 0.863);
     /* background-color: rgba(0,136, 169, 0.8); */
 }
 /* NAVIGATION BAR END */
+
+/* FORM CSS START */
+.signin-signup{
+    display: none;
+    margin: 48px 0px;
+}
+.signin-signup .main .form-heading{
+    text-align: center;
+    margin-bottom: 25px;
+}
+.signin-signup .main .form-heading span{
+    font-size: 81.96px;
+    font-weight: bolder;
+    color: red;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    -webkit-text-stroke: 1px rgb(99, 0, 0);
+}
+.signin-signup .main form{
+    margin: 0px auto;
+    width: 50%;
+    background-color: rgb(70, 68, 68);    
+}
+.signin-signup .main form input{
+    display: block;
+    margin: 0px auto;
+    border-radius: 20px;
+    border: none;
+    border-bottom: 2px solid black;
+    background: transparent;
+    box-shadow: 1px 1px 3px black;
+    padding: 5px 25px;
+}
+.signin-signup .main form .input:hover{
+    background-color: gray;
+}
+.signin-signup .main form .btn-login{
+    background-color: red;
+    font-weight: bold;
+}
+.signin-signup .main form .btn-login:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px 5px black;
+    color: white;
+    background-color: rgb(175, 0, 0);
+}
+.signin-signup .main form .btn-signup{
+    box-shadow: none;
+    padding-top: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+.signin-signup .main form .btn-signup:hover{
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    box-shadow: 1px 1px 3px black;
+}
+/* FORM CSS END */
 
 /* SLIDESSHOW START */
 .slide-show {
@@ -178,7 +246,7 @@ li, a, button, .slide-show-absolute-text{
 }
 /* ABOUT END */
 
-/* CONTACT US START */
+/* FEEDBACK START */
 .feedback{
     width: 80%;
     margin: auto;
@@ -214,6 +282,7 @@ li, a, button, .slide-show-absolute-text{
 }
 .feedback .form form .form-input-text:hover, .feedback .form form .form-textarea:hover{
     background-color: white;
+    box-shadow: 2px 1px 10px rgb(158, 158, 158);
     color: black;
 }
 
@@ -233,7 +302,7 @@ li, a, button, .slide-show-absolute-text{
     color: red;
     box-shadow: 1px 1px 8px white;
 }
-/* CONTACT US END */
+/* FEEDBACK END */
 
 /* FOOTER START */
 .home-selector{
@@ -313,9 +382,15 @@ li, a, button, .slide-show-absolute-text{
     }
     .nav-links li{
         padding: 0px 5px;
-      }
+    }
     .nav-links li a{
         padding: 0px 1px;
+    }
+    .signin-signup .main .form-heading span{
+        font-size: 45px;
+    }
+    .signin-signup .main form{
+        width: auto;
     }
     .feedback .heading label{
         font-size: medium;

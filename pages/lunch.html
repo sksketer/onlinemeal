@@ -1,48 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/lunch-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/snacks-style .css">
     <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
-    <title>Online meal Lunch</title>
+    <title>Online meal Snacks</title>
 </head>
+
 <body>
     <!-- NAVIGATION BAR STARTED -->
     <div class="nav" id="home">
-        <div class="nav-logo"><img src="../img/logowithtext.png" alt="logo" width="180px" ><label class="nav-logo-text"></label></div>
+        <div class="nav-logo animate__animated animate__heartBeat animate__infinite infinite"><img
+                src="../img/logowithtext.png" alt="logo" width="180px"><label class="nav-logo-text"></label></div>
         <nav>
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="#" onclick="showfeedbackform()">Feedback</a></li>
             </ul>
         </nav>
-        <a href="#" class="cta"><button>Login</button></a>
+        <a href="#" class="cta"><button onclick="showform()">Sign in</button></a>
     </div>
     <!-- NAVIGATION BAR COMPLETED -->
 
-    <!-- MAIN-CONTENT START -->
-    <div class="main-content">
-        <div class="breakfast-heading">
-            <label for="">Lunch</label>
-        </div>
-        
-        
-            
+    <!-- FORM START -->
+    <div class="signin-signup animate__pulse animate__delay-2s animate__slow" id="signin-signup">
+        <div class="main">
+            <form action="" method="post" class="signin-form">
+                <div class="content">
+                    <div class="form-heading"><span>LOGIN</span></div>
+                    <input type="text" name="username" id="" placeholder="username" class="input"> <br>
+                    <input type="password" name="password" id="" placeholder="password" class="input"> <br>
+                    <input type="submit" value="Login" class="btn-login">
+                </div>
+            </form>
+            <form action="../php/Regestration.php" method="post">
+                <span></span>
+                <input type="submit" value="Don't have Account Sign UP?" class="btn-signup">
+            </form>
         </div>
     </div>
 
-    
+    <script>
+        function showform() {
+            document.getElementById('signin-signup').style.cssText = 'display:block;';
+            document.getElementById('_containt').style.cssText = 'display:none';
+            var element = document.getElementById('signin-signup');
+            element.classList.add("animate__pulse animate__delay-2s animate__slow");
+        }
+    </script>
+    <!-- FORM END -->
+    <div class="_containt" id="_containt">
 
-    <!-- MAIN-CONTENR END -->
+        <!-- MAIN-CONTENT START -->
+        <div class="main-content">
+            <div class="breakfast-heading">
+                <label for="">Lunch</label>
+            </div>
+
+
+
+        </div>
+        <!-- MAIN-CONTENR END -->
+
+        <!-- FEEDBACK START -->
+        <div class="feedback" id="feedback">
+            <div class="heading">
+                <label for="">Feedback</label>
+            </div>
+            <div class="form">
+                <form action="" method="post">
+                    <label for="">Username</label>
+                    <input type="text" name="username" class="form-input-text" placeholder="sketeramrit">
+                    <label for="">Email</label>
+                    <input type="email" name="email" class="form-input-text" placeholder="ksamrit121@gmail.com">
+                    <label for="">Descriptrion</label>
+                    <textarea name="description" id="" cols="20" rows="3" class="form-textarea"
+                        placeholder="Description"></textarea>
+                    <input type="submit" value="Submit" class="form-submit">
+                </form>
+            </div>
+
+
+            <script>
+                function showfeedbackform() {
+                    document.getElementById('feedback').style.cssText = 'display:block;';
+                }
+            </script>
+            <!-- FEEDBACK END -->
+        </div>
+    </div>
 
     <!-- FOOTER START -->
     <div class="home-selector">
         <p>&copy; copyright 2020 by sketeramrit</p>
-        <label for="" class="contactus"><a href="#home"><i class="fa fa-comments-o" style="font-size:36px"></i></a></label>
+        <label for="" class="contactus"><a href="#home"><i class="fa fa-comments-o"
+                    style="font-size:36px"></i></a></label>
         <a href="#home" class="scroll-up"><i class="fa fa-arrow-circle-o-up" style="font-size:36px"></i></a>
     </div>
     <!-- FOOTER END -->
 </body>
+
 </html>

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    transition: all 0.3s ease 0s;
+}
+body{
+    background-color: rgb(35,36,41);
+}
+.logo{
+    margin: 25px 50px;
+}
+.logo img{
+}
+.logo span a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: large;
+    color: white;
+    float: right;
+    margin: 2vh 2vw 0px 0px;
+}
+.logo span a:hover{
+    color: red;
+    border-bottom: 1px solid red;
+}
+.main{
+    /* background-color: #fff; */
+
+}
+.signin-signup .main .form-heading{
+    text-align: center;
+    margin-bottom: 25px;
+}
+.signin-signup .main .form-heading span{
+    font-size: 81.96px;
+    font-weight: bolder;
+    color: red;
+    text-align: center;
+    -webkit-text-stroke: 1px rgb(99, 0, 0);
+}
+.signin-signup .main form{
+    margin: 0px auto;
+    width: 50%;
+    background-color: rgb(70, 68, 68);    
+}
+.signin-signup .main form input{
+    display: block;
+    margin: 0px auto;
+    border-radius: 20px;
+    border: none;
+    border-bottom: 2px solid black;
+    background: transparent;
+    box-shadow: 1px 1px 3px black;
+    padding: 5px 25px;
+}
+.signin-signup .main form .input:hover{
+    background-color: gray;
+}
+.signin-signup .main form .btn-login{
+    background-color: red;
+    font-weight: bold;
+}
+.signin-signup .main form .btn-login:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px 5px black;
+    color: white;
+    background-color: rgb(175, 0, 0);
+}
+.signin-signup .main form .btn-signup{
+    box-shadow: none;
+    padding-top: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+.signin-signup .main form .btn-signup:hover{
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    box-shadow: 1px 1px 3px black;
+}

@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/breakfast-style.css">
     <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
     <title>Online meal BreakFast</title>
@@ -11,17 +14,45 @@
 <body>
     <!-- NAVIGATION BAR STARTED -->
     <div class="nav" id="home">
-        <div class="nav-logo"><img src="../img/logowithtext.png" alt="logo" width="180px" ><label class="nav-logo-text"></label></div>
+        <div class="nav-logo animate__animated animate__heartBeat animate__infinite infinite"><img src="../img/logowithtext.png" alt="logo" width="180px" ><label class="nav-logo-text"></label></div>
         <nav>
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="#feedback" onclick="showfeedbackform()">Feedback</a></li>
             </ul>
         </nav>
-        <a href="#" class="cta"><button>Login</button></a>
+        <a href="#" class="cta"><button onclick="showform()">Sign in</button></a>
     </div>
     <!-- NAVIGATION BAR COMPLETED -->
 
+    <!-- FORM START -->
+    <div class="signin-signup animate__pulse animate__delay-2s animate__slow" id="signin-signup">
+        <div class="main">
+            <form action="" method="post" class="signin-form">
+                <div class="content">
+                    <div class="form-heading"><span>LOGIN</span></div>
+                    <input type="text" name="username" id="" placeholder="username" class="input"> <br>
+                    <input type="password" name="password" id="" placeholder="password" class="input"> <br>
+                    <input type="submit" value="Login" class="btn-login">
+                </div>
+            </form>
+            <form action="../php/Regestration.php" method="post">
+                <span></span>
+                <input type="submit" value="Don't have Account Sign UP?" class="btn-signup">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showform() {
+            document.getElementById('signin-signup').style.cssText = 'display:block;';
+            document.getElementById('_containt').style.cssText = 'display:none';
+            var element = document.getElementById('signin-signup');
+            element.classList.add("animate__pulse animate__delay-2s animate__slow");
+        }
+    </script>
+    <!-- FORM END -->
+<div class="_containt" id="_containt">
     <!-- MAIN-CONTENT START -->
     <div class="main-content">
         <div class="breakfast-heading">
@@ -36,31 +67,31 @@
             </div> -->
 
             <div class="myslide">
-                <div class="img1">
-                    <img src="../img/Breakfast/amlet.jpg" width="400px" height="250px" alt="Image Not Found">
+                <div class="img">
+                    <a href="#"><img src="../img/Breakfast/update/amlet.jpg" width="400px" height="250px" alt="Image Not Found"></a>
                     <label for="">Amlet</label>
                 </div>
-                <div class="img2">
-                    <img src="../img/Breakfast/Aloo_Paratha.jpg" width="400px" height="250px" alt="Image Not Found">
-                    <label for="">Aloo Pharatha</label>
+                <div class="img">
+                    <a href="#"><img src="../img/Breakfast/update/Chhole-Bhature.jpg" width="150px" height="250px" alt="Image Not Found"></a>
+                    <label for="">Chhole Bhature</label>
                 </div>
-                <div class="img3">
-                    <img src="../img/Breakfast/bread-and-butter.jpg" width="400px" height="250px" alt="Image Not Found">
+                <div class="img">
+                    <a href="#"><img src="../img/Breakfast/update/bread-and-butter.jpg" width="400px" height="250px" alt="Image Not Found"></a>
                     <label for="">Bread and Butter</label>
                 </div>              
             </div> 
             <div class="myslide">
-                <div class="img1">
-                    <img src="../img/Breakfast/chai pharatha.jpg pharatha.jpg" width="400px" height="250px" alt="Image Not Found">
+                <div class="img">
+                    <a href="#"><img src="../img/Breakfast/update/chai pharatha.jpg pharatha.jpg" width="400px" height="250px" alt="Image Not Found"></a>
                     <label for="">Chai Pharatha</label>
                 </div>
-                <div class="img2">
-                    <img src="../img/Breakfast/poha.JPG" width="400px" height="250px" alt="Image Not Found">
+                <div class="img">
+                    <a href="#"><img src="../img/Breakfast/update/poha.JPG" width="400px" height="250px" alt="Image Not Found"></a>
                     <label for="">Poha</label>
                 </div>
-                <div class="img3">
-                    <img src="../img/Breakfast/Chhole-Bhature.jpg" width="400px" height="250px" alt="Image Not Found">
-                    <label for="">Chhole Bhature</label>
+                <div class="img">
+                    <a href="#"><img src="../img/Breakfast/update/Aloo_Paratha.jpg" width="400px" height="250px" alt="Image Not Found"></a>
+                    <label for="">Aloo Pharatha</label>                    
                 </div>              
             </div>
 
@@ -91,6 +122,33 @@
     </script>
 
     <!-- MAIN-CONTENR END -->
+
+    <!-- FEEDBACK START -->
+    <div class="feedback" id="feedback">
+        <div class="heading">
+            <label for="">Feedback</label>
+        </div>
+        <div class="form">
+            <form action="" method="post">
+                <label for="">Username</label>
+                <input type="text" name="username" class="form-input-text" placeholder="sketeramrit">
+                <label for="">Email</label>
+                <input type="email" name="email" class="form-input-text" placeholder="ksamrit121@gmail.com">
+                <label for="">Descriptrion</label>
+                <textarea name="description" id="" cols="20" rows="3" class="form-textarea" placeholder="Description"></textarea>
+                <input type="submit" value="Submit" class="form-submit">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showfeedbackform() {
+            document.getElementById('feedback').style.cssText = 'display:block;';
+        }
+    </script>
+    <!-- FEEDBACK END -->
+</div>
+    
 
     <!-- FOOTER START -->
     <div class="home-selector">
