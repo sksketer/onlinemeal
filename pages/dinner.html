@@ -8,40 +8,46 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/snacks-style .css">
-    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
-    <title>Online meal Snacks</title>
+    <link rel="shortcut icon" href="../img/logo/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/page.css">
+    <title>Online meal Dinner</title>
 </head>
 
 <body>
     <!-- NAVIGATION BAR STARTED -->
     <div class="nav" id="home">
         <div class="nav-logo animate__animated animate__heartBeat animate__infinite infinite"><img
-                src="../img/logowithtext.png" alt="logo" width="180px"><label class="nav-logo-text"></label></div>
+                src="../img/logo/logowithtext.png" alt="logo" width="180px"><label class="nav-logo-text"></label></div>
         <nav>
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="#" onclick="showfeedbackform()">Feedback</a></li>
+                <li><a href="#feedback" onclick="showfeedbackform()">Feedback</a></li>
             </ul>
         </nav>
-        <a href="#" class="cta"><button onclick="showform()">Sign in</button></a>
+        <div class="sign-btn">
+            <a href="#" class="cta"><button onclick="showform()">Sign in</button></a>
+            <form action="../php/Regestration.php" method="post">
+                <input type="hidden" name="count" value="1" id="">
+                <input type="submit" name="sign-up" value="Sign up" class="form-cta">
+            </form>
+        </div>
     </div>
     <!-- NAVIGATION BAR COMPLETED -->
 
     <!-- FORM START -->
     <div class="signin-signup animate__pulse animate__delay-2s animate__slow" id="signin-signup">
         <div class="main">
-            <form action="" method="post" class="signin-form">
+            <form action="../php/check-login.php" method="post" class="signin-form">
                 <div class="content">
                     <div class="form-heading"><span>LOGIN</span></div>
-                    <input type="text" name="username" id="" placeholder="username" class="input"> <br>
+                    <input type="email" name="email" id="" placeholder="email id" class="input"> <br>
                     <input type="password" name="password" id="" placeholder="password" class="input"> <br>
-                    <input type="submit" value="Login" class="btn-login">
+                    <input type="submit" name="login" value="Login" class="btn-login">
                 </div>
             </form>
             <form action="../php/Regestration.php" method="post">
-                <span></span>
-                <input type="submit" value="Don't have Account Sign UP?" class="btn-signup">
+                <input type="hidden" name="count" value="1" id="">
+                <input type="submit" name="sign-up" value="Don't have Account Sign UP?" class="btn-signup">
             </form>
         </div>
     </div>
@@ -55,55 +61,96 @@
         }
     </script>
     <!-- FORM END -->
-    <div class="_containt" id="_containt">
 
-        <!-- MAIN-CONTENT START -->
-        <div class="main-content">
-            <div class="breakfast-heading">
-                <label for="">Dinner</label>
-            </div>
-
-
-
+    <!-- MAIN-CONTENT START -->
+    <div class="main-content">
+        <div class="breakfast-heading">
+            <label for="">Snacks</label>
         </div>
-        <!-- MAIN-CONTENR END -->
 
-        <!-- FEEDBACK START -->
-        <div class="feedback" id="feedback">
-            <div class="heading">
-                <label for="">Feedback</label>
+        <div class="myslider">
+            <div class="myslide">
+                <div class="img">
+                    <a href="#"><img src="../img/dinner/din1.jpg" width="400px" height="250px"
+                            alt="Image Not Found"></a>
+                    <label for="">Biryani</label>
+                </div>
+                <div class="img">
+                    <a href="#"><img src="../img/dinner/din2.jpg" width="150px" height="250px"
+                            alt="Image Not Found"></a>
+                    <label for="">Rajma Chawal</label>
+                </div>
+                <div class="img">
+                    <a href="#"><img src="../img/dinner/din3.jpg" width="400px" height="250px"
+                            alt="Image Not Found"></a>
+                    <label for="">Egg Cury</label>
+                </div>
             </div>
-            <div class="form">
-                <form action="" method="post">
-                    <label for="">Username</label>
-                    <input type="text" name="username" class="form-input-text" placeholder="sketeramrit">
-                    <label for="">Email</label>
-                    <input type="email" name="email" class="form-input-text" placeholder="ksamrit121@gmail.com">
-                    <label for="">Descriptrion</label>
-                    <textarea name="description" id="" cols="20" rows="3" class="form-textarea"
-                        placeholder="Description"></textarea>
-                    <input type="submit" value="Submit" class="form-submit">
-                </form>
+            <div class="myslide">
+                <div class="img">
+                    <a href="#"><img src="../img/dinner/din4.jpg" width="400px" height="250px"
+                            alt="Image Not Found"></a>
+                    <label for="">Chole Nan</label>
+                </div>
+                <div class="img">
+                    <a href="#"><img src="../img/dinner/din5.jpg" width="400px" height="250px"
+                            alt="Image Not Found"></a>
+                    <label for="">Indian Thali</label>
+                </div>
+                <div class="img">
+                    <a href="#"><img src="../img/dinner/din6.jpg" width="400px" height="250px"
+                            alt="Image Not Found"></a>
+                    <label for="">Turkey</label>
+                </div>
             </div>
+        </div>
+    </div>
+    <!-- MAIN-CONTENT END -->
 
-
-            <script>
-                function showfeedbackform() {
-                    document.getElementById('feedback').style.cssText = 'display:block;';
-                }
-            </script>
-            <!-- FEEDBACK END -->
+    <!-- FEEDBACK START -->
+    <div class="feedback" id="feedback">
+        <div class="heading">
+            <label for="">Feedback</label>
+        </div>
+        <div class="form">
+            <form action="" method="post">
+                <label for="">Username</label>
+                <input type="text" name="username" class="form-input-text" placeholder="sketeramrit">
+                <label for="">Email</label>
+                <input type="email" name="email" class="form-input-text" placeholder="ksamrit121@gmail.com">
+                <label for="">Descriptrion</label>
+                <textarea name="description" id="" cols="20" rows="3" class="form-textarea"
+                    placeholder="Description"></textarea>
+                <input type="submit" value="Submit" class="form-submit">
+            </form>
         </div>
     </div>
 
+    <script>
+        function showfeedbackform() {
+            document.getElementById('feedback').style.cssText = 'display:block;';
+        }
+    </script>
+    <!-- FEEDBACK END -->
+
     <!-- FOOTER START -->
-    <div class="home-selector">
-        <p>&copy; copyright 2020 by sketeramrit</p>
-        <label for="" class="contactus"><a href="#home"><i class="fa fa-comments-o"
-                    style="font-size:36px"></i></a></label>
+    <div class="home-selector" id="home-selector">
+        <p id="copyrightbysketeramrit">&copy; copyright 2020 by sk</p>
+        <label for="" class="contactus">
+            <!-- <a href="pages/contactus.html"> -->
+            <i class="fa fa-comments-o" style="font-size:36px" onclick="footer_contactus()"><span class="span-text"
+                    id="span-text"><a href="mailto:ksamrit121@gmail.com" id="span-text-a">For Contact- Mail
+                        me</a></span></i>
+        </label>
         <a href="#home" class="scroll-up"><i class="fa fa-arrow-circle-o-up" style="font-size:36px"></i></a>
     </div>
     <!-- FOOTER END -->
+    <script>
+        function footer_contactus()
+        {
+            document.getElementById('span-text-a').style.cssText = 'display: block;';
+        }
+    </script>
 </body>
 
 </html>
