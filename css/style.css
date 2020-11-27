@@ -319,13 +319,27 @@ li, a, button, .slide-show-absolute-text{
     float: left;
     margin: 0px 0px 2px 20px;
     transition: all 0.3s ease 0s;
+    position: relative;
+    width: 200px;
 }
-.home-selector label a i span{
+.home-selector label{
+    cursor: pointer;
+}
+.home-selector label i .span-text a{
     font-size: medium;
-    padding: 2px;
+    padding: 2px 8px;
     display: none;
+    position: absolute;
+    border-radius: 20px;
+    color: red;
+    font-weight: bold;
+    top: -15px;
+    left: 0px;
 }
-.home-selector a{
+.home-selector label i .span-text a:hover{
+    display: block;
+}
+.home-selector .scroll-up{
     float: right;
     padding: 0px 20px 2px 0px;
     
@@ -345,6 +359,9 @@ li, a, button, .slide-show-absolute-text{
       .cta button{
           margin-top: 20px;
       }
+      .form-cta{
+        margin-top: 20px;
+    }
 }
 @media only screen and (max-width: 700px) {
     
