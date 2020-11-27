@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="shortcut icon" href="img/logo/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Sign up</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
@@ -165,19 +167,48 @@ li, a, button, .slide-show-absolute-text{
     <!-- NAVIGATION BAR STARTED -->
     <div class="nav" id="home">
         <div class="nav-logo animate__animated animate__heartBeat animate__infinite infinite"><img
-                src="../img/logowithtext.png" alt="logo" width="180px"><label class="nav-logo-text"></label></div>
+                src="../img/logo/logowithtext.png" alt="logo" width="180px"><label class="nav-logo-text"></label></div>
         <nav>
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="#feedback">Feedback</a></li>
             </ul>
         </nav>
-        <form action="Regestration.php" method="post">
-            <input type="submit" name="sign-up" value="Sign up" class="form-cta">
-        </form>
+        <div class="sign-btn">
+            <a href="#" class="cta"><button onclick="showform()">Sign in</button></a>
+        </div>
     </div>
+    <!-- FORM START -->
+    <div class="signin-signup animate__pulse animate__delay-2s animate__slow" id="signin-signup">
+        <div class="main">
+            <form action="check-login.php" method="post" class="signin-form">
+                <div class="content">
+                    <div class="form-heading"><span>LOGIN</span></div>
+                    <input type="email" name="email" id="" placeholder="email id" class="input"> <br>
+                    <input type="password" name="password" id="" placeholder="password" class="input"> <br>
+                    <input type="submit" name="login" value="Login" class="btn-login">
+                </div>
+            </form>
+            <form action="Regestration.php" method="post">
+                <span></span>
+                <input type="hidden" name="count" value="1" id="">
+                <input type="submit" name="sign-up" value="Don't have Account Sign UP?" class="btn-signup">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showform() {
+            document.getElementById('signin-signup').style.cssText = 'display:block;';
+            document.getElementById('_containt').style.cssText = 'display:none';
+            var element = document.getElementById('signin-signup');
+            element.classList.add("animate__pulse animate__delay-2s animate__slow");
+        }
+    </script>
+    <!-- FORM END -->
     <!-- NAVIGATION BAR COMPLETED -->
 
+    <div class="_containt" id="_containt">
     <!-- MAIN START -->
     <?php
         $fname=$lname=$email=$password=$cpassword=$dob=$gender="";
@@ -353,14 +384,23 @@ li, a, button, .slide-show-absolute-text{
         
     ?>
     <!-- MAIN END -->
-
-    <!-- FOOTER START -->
-    <div class="home-selector">
-            <p>&copy; copyright 2020 by sketeramrit</p>
-            <label for="" class="contactus"><a href="pages/contactus.html"><i class="fa fa-comments-o"
-                        style="font-size:36px"><span>Contact us</span></i></a></label>
-            <a href="#home" class="scroll-up"><i class="fa fa-arrow-circle-o-up" style="font-size:36px"></i></a>
     </div>
+    <!-- FOOTER START -->
+    <div class="home-selector" id="home-selector">
+                    <p id="copyrightbysketeramrit">&copy; copyright 2020 by </p>
+                    <label for="" class="contactus"><!-- <a href="pages/contactus.html"> -->
+                        <i class="fa fa-comments-o" style="font-size:36px" onclick="footer_contactus()"><span class="span-text" id="span-text"><a href="mailto:ksamrit121@gmail.com" id="span-text-a">For Contact- Mail me</a></span></i>
+                    </label>
+                    <a href="#home" class="scroll-up"><i class="fa fa-arrow-circle-o-up" style="font-size:36px"></i></a>
+                </div>
+                <!-- FOOTER END -->
+                <script>
+                    document.getElementById("copyrightbysketeramrit").innerHTML = " &copy; copyright 2020 By sketeramrit";
+                    function footer_contactus()
+                    {
+                        document.getElementById("span-text-a").style.cssText = "display: block;";
+                    }
+                </script>
     <!-- FOOTER END -->
     <script> 
                         function hide()
