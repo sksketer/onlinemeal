@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../css/page.css">
-    <title>Online meal BreakFast</title>
+    <title>Online meal Dinner</title>
     <style>
         .body{
            background-color: rgb(35,36,41);
@@ -20,7 +20,7 @@
         echo '
         <div class="main-content">
         <div class="breakfast-heading">
-            <label for="">Snacks</label>
+            <label for="">Dinner</label>
         </div>
 
         <div class="myslider">
