@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    transition: all 0.3s ease 0s;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+body{
+    background-color: rgb(22, 22, 26);
+    padding: 0px; margin: 0px;
+}
+
+.container{
+    width: 70%;
+    margin: auto;
+    height: 100vh;
+    background-color: rgb(35,36,41);
+}
+/* SLIDESSHOW START */
+.slide-show {
+    background-color: rgb(35, 36, 41);
+}
+
+.myslide{
+    position: relative;
+    width: 60%;
+    margin: 0px auto 0px auto;
+}
+.myslide img{
+    margin: auto;
+    border-radius: 20px;
+    height: 375px;
+}
+.amt{
+    background-color: black;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 6px 4px 3px 12px;
+    border-radius: 20px 0px 20px 0px;
+    width: 95px;
+    position: absolute;
+    bottom: 3px;
+    right: 0;
+}
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+}
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(35, 36, 41);
+}
+.dot-div{
+    padding: 10px;
+}
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: rgb(107, 107, 107);
+    border-radius: 50%;
+    display: inline-block;
+}
+.active {
+    background-color: #ffffff;
+}
+.name h1{
+    font-family: 'Nerko One', cursive;
+    color: red;
+    text-shadow: 2px 2px 20px white;
+    font-size: 80px;
+    font-weight: 400;
+    text-align: center;
+}
+/* SLIDESHOW END */
+.select form{
+    margin: 0px 20px;
+}
+.select form .span1{
+    margin: 0px 50px;
+}
+.select form select{
+    border: none;
+    background: transparent;
+    width: 50px;
+    margin: 0px 15px;
+    text-align: center;
+    box-shadow: 1px 1px 2px white;
+}
+.select form .add-to-cart{
+    background-color: transparent;
+    border: none;
+    color: red;
+    cursor: pointer;
+    margin: 0px 0px 0px 325px;
+}
+.select form .amount{
+    text-align: center;
+    margin: 25px 0px;
+}
+.select form .amount label span{
+    background-color: rgb(95, 95, 95);
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+.select form .order-now{
+    margin: 10px auto;
+    display: block;
+    border: none;
+    background-color: red;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+/* MEDIA QUERY */
+
+@media only screen and (max-width: 800px){
+    .container{
+        width: 100%;
+    }
+    .select form .add-to-cart{
+        margin: 0px 0px 0px 240px;
+    }
+    .select form select{
+        margin: 0px 2px;
+    }
+}
+@media only screen and (max-width: 400px){
+    .myslide{
+        width: 80%;
+    }
+    .myslide img{
+        height: 220px;
+    }
+    .amt{
+        font-size: 18px;
+        width: 68px;
+    }
+    .name h1{
+        font-size: 50px;
+        text-shadow: 1px 1px 10px white;
+    }
+    .select form select{
+        display: block;
+        margin: 10px auto;
+    }
+    .select form .add-to-cart{
+        display: block;
+        margin: 5px auto;
+    }
+}
