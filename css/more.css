@@ -105,7 +105,8 @@ body{
     border: none;
     color: red;
     cursor: pointer;
-    margin: 0px 0px 0px 325px;
+    float: right;
+    margin-right: 80px;
 }
 .select form .amount{
     text-align: center;
