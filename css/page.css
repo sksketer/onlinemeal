@@ -314,6 +314,9 @@ li, a, button, .slide-show-absolute-text{
       text-align: center;
       padding: 10px 0px;
     }
+    .form-cta{
+        margin-top: 20px;
+    }
 }
 
 @media only screen and (max-width: 550px){
