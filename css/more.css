@@ -87,26 +87,27 @@ body{
 }
 /* SLIDESHOW END */
 .select form{
-    margin: 0px 20px;
+    margin: 0px 35px;
+    display: flex;
+    flex-direction: column;
 }
-.select form .span1{
-    margin: 0px 50px;
+.select form .row1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
-.select form select{
+.select form .row1 select{
     border: none;
     background: transparent;
     width: 50px;
-    margin: 0px 15px;
     text-align: center;
     box-shadow: 1px 1px 2px white;
 }
-.select form .add-to-cart{
+.select form .row1 .add-to-cart{
     background-color: transparent;
     border: none;
     color: red;
     cursor: pointer;
-    float: right;
-    margin-right: 80px;
 }
 .select form .amount{
     text-align: center;
@@ -117,7 +118,7 @@ body{
     padding: 2px 8px;
     border-radius: 10px;
 }
-.select form .order-now{
+.select form .row3 .order-now{
     margin: 10px auto;
     display: block;
     border: none;
@@ -133,11 +134,25 @@ body{
     .container{
         width: 100%;
     }
-    .select form .add-to-cart{
-        margin: 0px 0px 0px 240px;
+
+}
+@media only screen and (max-width: 500px){
+    .select form .row1{
+        display: flex;
+        flex-direction: column;
     }
-    .select form select{
-        margin: 0px 2px;
+    .select form .row1 span{
+        display: block;
+        text-align: center;
+        margin: 12px 0px 10px 0px;
+    }
+    .myslide img{
+        height: 220px;
+    }
+    
+    .name h1{
+        font-size: 50px;
+        text-shadow: 1px 1px 10px white;
     }
 }
 @media only screen and (max-width: 400px){
@@ -155,11 +170,11 @@ body{
         font-size: 50px;
         text-shadow: 1px 1px 10px white;
     }
-    .select form select{
+    .select form .row1 select{
         display: block;
         margin: 10px auto;
     }
-    .select form .add-to-cart{
+    .select form .row1 .add-to-cart{
         display: block;
         margin: 5px auto;
     }
