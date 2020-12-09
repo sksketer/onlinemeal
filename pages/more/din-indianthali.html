@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/more.css">
+    <link rel="shortcut icon" href="../../img/logo/logo.png" type="image/x-icon">
+    <title>IndianThali </title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- SLIDESHOW START -->
+        <div style="text-align:center" class="dot-div">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <div class="main">
+            <div class="slide-show">
+                <div class="myslide">
+                    <div class="numbertext">1 / 3</div>
+                    <img class="img" src="../../img/dinner/more/indianthali1.jpg" style="width:100%">
+                    <div class="amt">&#8377;150/-</div>
+                </div>
+                <div class="myslide">
+                    <div class="numbertext">2 / 3</div>
+                    <img class="img" src="../../img/dinner/more/indianthali2.jpg" style="width:100%">
+                    <div class="amt">&#8377;150/-</div>
+                </div>
+                <div class="myslide">
+                    <div class="numbertext">3 / 3</div>
+                    <img class="img" src="../../img/dinner/more/indianthali3.jpg" style="width:100%">
+                    <div class="amt">&#8377;150/-</div>
+                </div>
+            </div>
+        </div>
+        <div class="name">
+            <h1>Indian Thali</h1>
+        </div>
+        <!-- SLIDESHOW END -->
+        <div class="select">
+            <form action="" method="post">
+                <div class="row1">
+                    <span class="span1">Select Number of items:  &nbsp;
+                        <select name="select" id="select">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </span>
+                    <input type="submit" value="Add-to-cart" class="add-to-cart">
+                </div>
+                <div class="amount">
+                    <label for="">Total Amount- <span> __ Rs.</span></label>
+                </div>
+                <div class="row3">
+                    <input type="submit" value="Order Now" class="order-now">
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("myslide");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+    </script>
+</body>
+
+</html>
